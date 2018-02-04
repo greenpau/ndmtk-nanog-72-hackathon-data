@@ -1,0 +1,12 @@
+Hardware inventory:
+Item             Version  Part number  Serial number     Description
+Chassis                                VMX9              VMX
+Midplane
+Routing Engine 0                                         RE-VMX
+  ad0   20473 MB  QEMU HARDDISK        QM00001           Hard Disk
+CB 0                                                     VMX SCB
+CB 1                                                     VMX SCB
+FPC 0                                                    Virtual FPC
+  CPU            Rev. 1.0 RIOT         123XYZ987
+  MIC 0                                                  Virtual
+    PIC 0                 BUILTIN      BUILTIN           Virtual
