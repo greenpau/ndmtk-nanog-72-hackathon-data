@@ -1,0 +1,127 @@
+inet.0: 13 destinations, 21 routes (13 active, 0 holddown, 0 hidden)
++ = Active Route, - = Last Active, * = Both
+
+0.0.0.0/0          *[Static/5] 06:03:26
+                    > to 10.0.0.2 via fxp0.0
+10.0.0.0/24        *[Direct/0] 06:03:31
+                    > via fxp0.0
+                    [BGP/170] 05:58:22, localpref 100, from 10.1.64.1
+                      AS path: I, validation-state: unverified
+                    > to 10.1.0.0 via ge-0/0/0.0
+                    [BGP/170] 05:58:41, localpref 100, from 10.1.64.2
+                      AS path: I, validation-state: unverified
+                    > to 10.1.1.0 via ge-0/0/1.0
+10.0.0.33/32       *[Local/0] 06:03:31
+                      Local via fxp0.0
+10.1.0.0/31        *[Direct/0] 05:59:42
+                    > via ge-0/0/0.0
+                    [BGP/170] 05:58:22, localpref 100, from 10.1.64.1
+                      AS path: I, validation-state: unverified
+                    > to 10.1.0.0 via ge-0/0/0.0
+10.1.0.1/32        *[Local/0] 05:59:43
+                      Local via ge-0/0/0.0
+10.1.1.0/31        *[Direct/0] 05:59:42
+                    > via ge-0/0/1.0
+                    [BGP/170] 05:58:41, localpref 100, from 10.1.64.2
+                      AS path: I, validation-state: unverified
+                    > to 10.1.1.0 via ge-0/0/1.0
+10.1.1.1/32        *[Local/0] 05:59:43
+                      Local via ge-0/0/1.0
+10.1.2.0/31        *[IS-IS/18] 05:58:36, metric 20
+                      to 10.1.0.0 via ge-0/0/0.0
+                    > to 10.1.1.0 via ge-0/0/1.0
+                    [BGP/170] 05:58:22, localpref 100, from 10.1.64.1
+                      AS path: I, validation-state: unverified
+                    > to 10.1.0.0 via ge-0/0/0.0
+                    [BGP/170] 05:58:41, localpref 100, from 10.1.64.2
+                      AS path: I, validation-state: unverified
+                    > to 10.1.1.0 via ge-0/0/1.0
+10.1.64.1/32       *[IS-IS/18] 05:58:36, metric 20
+                    > to 10.1.0.0 via ge-0/0/0.0
+                    [BGP/170] 05:58:22, localpref 100, from 10.1.64.1
+                      AS path: I, validation-state: unverified
+                    > to 10.1.0.0 via ge-0/0/0.0
+10.1.64.2/32       *[IS-IS/18] 05:58:42, metric 20
+                    > to 10.1.1.0 via ge-0/0/1.0
+                    [BGP/170] 05:58:41, localpref 100, from 10.1.64.2
+                      AS path: I, validation-state: unverified
+                    > to 10.1.1.0 via ge-0/0/1.0
+10.1.64.3/32       *[Direct/0] 06:03:31
+                    > via lo0.0
+10.1.128.0/24      *[BGP/170] 05:58:22, localpref 100, from 10.1.64.1
+                      AS path: I, validation-state: unverified
+                    > to 10.1.0.0 via ge-0/0/0.0
+10.1.129.0/24      *[BGP/170] 05:58:41, localpref 100, from 10.1.64.2
+                      AS path: I, validation-state: unverified
+                    > to 10.1.1.0 via ge-0/0/1.0
+
+iso.0: 1 destinations, 1 routes (1 active, 0 holddown, 0 hidden)
++ = Active Route, - = Last Active, * = Both
+
+49.0001.0100.0106.6003/72
+                   *[Direct/0] 06:03:31
+                    > via lo0.0
+
+inet6.0: 14 destinations, 20 routes (14 active, 0 holddown, 0 hidden)
++ = Active Route, - = Last Active, * = Both
+
+::/0               *[Static/5] 06:03:26
+                      Discard
+2001:db8::10:1:0:0/127
+                   *[Direct/0] 05:59:32
+                    > via ge-0/0/0.0
+                    [BGP/170] 05:58:36, localpref 100, from 2001:db8::10:1:64:1
+                      AS path: I, validation-state: unverified
+                    > to fe80::2ec2:60ff:fe59:8125 via ge-0/0/0.0
+2001:db8::10:1:0:1/128
+                   *[Local/0] 05:59:43
+                      Local via ge-0/0/0.0
+2001:db8::10:1:1:0/127
+                   *[Direct/0] 05:59:32
+                    > via ge-0/0/1.0
+                    [BGP/170] 05:58:33, localpref 100, from 2001:db8::10:1:64:2
+                      AS path: I, validation-state: unverified
+                    > to fe80::2ec2:60ff:fe0e:b91f via ge-0/0/1.0
+2001:db8::10:1:1:1/128
+                   *[Local/0] 05:59:43
+                      Local via ge-0/0/1.0
+2001:db8::10:1:2:0/127
+                   *[IS-IS/18] 05:58:36, metric 20
+                    > to fe80::2ec2:60ff:fe59:8125 via ge-0/0/0.0
+                      to fe80::2ec2:60ff:fe0e:b91f via ge-0/0/1.0
+                    [BGP/170] 05:58:36, localpref 100, from 2001:db8::10:1:64:1
+                      AS path: I, validation-state: unverified
+                    > to fe80::2ec2:60ff:fe59:8125 via ge-0/0/0.0
+                    [BGP/170] 05:58:33, localpref 100, from 2001:db8::10:1:64:2
+                      AS path: I, validation-state: unverified
+                    > to fe80::2ec2:60ff:fe0e:b91f via ge-0/0/1.0
+2001:db8::10:1:64:1/128
+                   *[IS-IS/18] 05:58:36, metric 20
+                    > to fe80::2ec2:60ff:fe59:8125 via ge-0/0/0.0
+                    [BGP/170] 05:58:36, localpref 100, from 2001:db8::10:1:64:1
+                      AS path: I, validation-state: unverified
+                    > to fe80::2ec2:60ff:fe59:8125 via ge-0/0/0.0
+2001:db8::10:1:64:2/128
+                   *[IS-IS/18] 05:58:42, metric 20
+                    > to fe80::2ec2:60ff:fe0e:b91f via ge-0/0/1.0
+                    [BGP/170] 05:58:33, localpref 100, from 2001:db8::10:1:64:2
+                      AS path: I, validation-state: unverified
+                    > to fe80::2ec2:60ff:fe0e:b91f via ge-0/0/1.0
+2001:db8::10:1:64:3/128
+                   *[Direct/0] 06:03:31
+                    > via lo0.0
+2001:db8:1:128::/64*[BGP/170] 05:58:36, localpref 100, from 2001:db8::10:1:64:1
+                      AS path: I, validation-state: unverified
+                    > to fe80::2ec2:60ff:fe59:8125 via ge-0/0/0.0
+2001:db8:1:129::/64*[BGP/170] 05:58:33, localpref 100, from 2001:db8::10:1:64:2
+                      AS path: I, validation-state: unverified
+                    > to fe80::2ec2:60ff:fe0e:b91f via ge-0/0/1.0
+fe80::2ec2:600f:fc4f:2e9a/128
+                   *[Direct/0] 06:03:31
+                    > via lo0.0
+fe80::2ec2:60ff:fe39:95b2/128
+                   *[Local/0] 05:59:43
+                      Local via ge-0/0/0.0
+fe80::2ec2:60ff:fe61:103a/128
+                   *[Local/0] 05:59:43
+                      Local via ge-0/0/1.0
