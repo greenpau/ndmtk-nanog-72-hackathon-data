@@ -1,0 +1,6 @@
+MAC Address       Address         Interface         Flags
+2c:c2:60:ff:00:11 10.0.0.2        fxp0.0                   none
+2c:c2:60:61:10:3a 10.1.1.1        ge-0/0/1.0               none
+2c:c2:60:32:65:a6 10.1.2.0        ge-0/0/2.0               none
+2c:c2:60:0c:78:1c 128.0.0.16      em1.0                    none
+Total entries: 4
