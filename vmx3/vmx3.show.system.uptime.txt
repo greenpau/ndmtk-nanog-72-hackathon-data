@@ -1,0 +1,6 @@
+Current time: 2018-02-18 18:32:44 UTC
+Time Source:  LOCAL CLOCK
+System booted: 2018-02-18 12:26:21 UTC (06:06:23 ago)
+Protocols started: 2018-02-18 12:29:09 UTC (06:03:35 ago)
+Last configured: 2018-02-16 23:50:32 UTC (1d 18:42 ago) by ntc
+ 6:32PM  up 6:06, 1 user, load averages: 0.00, 0.00, 0.00
